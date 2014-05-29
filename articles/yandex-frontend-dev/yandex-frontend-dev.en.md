@@ -101,10 +101,6 @@ page is an interface block.
   </tr>
 </table>
 
-To operate the blocks, it's good to name them. Here there are a `Menu`, a
-`Calendar` control, a `Footer`, a `Tabbed pane`, a `Dropdown` and a `Search`
-blocks.
-
 Futhermore, some blocks are large. They usually preserve other blocks. But they
 still are solid independent pieces.
 
