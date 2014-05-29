@@ -72,35 +72,6 @@ A block is an independent interface piece that preserves a design point and some
 functionality. Anything that can be taken as a solid piece and can be put into a
 page is an interface block.
 
-<table>
-  <tr>
-      <td>
-          <img
-          src="http://img-fotki.yandex.ru/get/5645/14441195.26/0_711d9_9d9c6157_XL.jpg"
-          width="800" height="52" title="" alt="" border="0"/>
-      </td>
-  </tr>
-  <tr>
-      <td>
-          <img
-          src="http://img-fotki.yandex.ru/get/6439/14441195.26/0_711dc_2f5ffa46_M.jpg"
-          width="300" height="259" title="" alt="" border="0"/>
-      </td>
-      <td>
-          <img
-          src="http://img-fotki.yandex.ru/get/4122/14441195.26/0_711da_e8f6dee7_M.jpg"
-          width="300" height="271" title="" alt="" border="0"/>
-      </td>
-  </tr>
-  <tr>
-      <td>
-          <img
-          src="http://img-fotki.yandex.ru/get/5634/14441195.26/0_711db_81f5c441_L.jpg"
-          width="500" height="47" title="" alt="" border="0"/>
-      </td>
-  </tr>
-</table>
-
 To operate the blocks, it's good to name them. Here there are a `Menu`, a
 `Calendar` control, a `Footer`, a `Tabbed pane`, a `Dropdown` and a `Search`
 blocks.
