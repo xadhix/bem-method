@@ -599,7 +599,25 @@ write the import instruction linking it to your page.
 ##Modifier
 Now to the last notion, a `modifier`.
 
-
+<table>
+    <tr>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/6439/14441195.26/0_711dc_2f5ffa46_M.jpg"
+            width="300" height="259" title="" alt="" border="0"/>
+        </td>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/5627/14441195.27/0_71207_4cfc639a_M.jpg"
+            width="300" height="259" title="" alt="" border="0"/>
+        </td>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/5632/14441195.27/0_71206_5fb7bc50_M.jpg"
+            width="300" height="259" title="" alt="" border="0"/>
+        </td>
+    </tr>
+</table>
 
 Again, the same block sometimes can look slightly different. Here it is not
 because of optional elements but because of its own design distinctions.
