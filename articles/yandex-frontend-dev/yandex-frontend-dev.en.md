@@ -72,7 +72,7 @@ A block is an independent interface piece that preserves a design point and some
 functionality. Anything that can be taken as a solid piece and can be put into a
 page is an interface block.
 
-<table border="0">
+<table>
   <tr>
       <td>
           <img
