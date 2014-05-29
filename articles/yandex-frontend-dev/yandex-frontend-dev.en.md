@@ -599,3 +599,277 @@ write the import instruction linking it to your page.
 ##Modifier
 Now to the last notion, a `modifier`.
 
+<table border="0">
+    <tr>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/6439/14441195.26/0_711dc_2f5ffa46_M.jpg"
+            width="300" height="259" title="" alt="" border="0"/>
+        </td>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/5627/14441195.27/0_71207_4cfc639a_M.jpg"
+            width="300" height="259" title="" alt="" border="0"/>
+        </td>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/5632/14441195.27/0_71206_5fb7bc50_M.jpg"
+            width="300" height="259" title="" alt="" border="0"/>
+        </td>
+    </tr>
+</table>
+
+Again, the same block sometimes can look slightly different. Here it is not
+because of optional elements but because of its own design distinctions.
+
+Of course, it is always possible to implement all these tabbed panes as diverse
+blocks. But that would be copy paste which we we can't abide.
+
+The way out is to equip a block with an additional CSS class to provide changes.
+Such an addition is called a modifier.
+
+````js
+    <div class="tabbed-pane tabbed-pane_theme_blue">
+        <ul>
+            <li class="tabbed-pane__tab">Tab 1</li>
+            <li class="tabbed-pane__tab">Tab 2</li>
+        </ul>
+        <div class="tabbed-pane__pane">
+            ...
+        </div>
+    </div>
+````
+
+Remember, we were wise enough to use classes. So, we can add to a block DOM node
+as many modifiers as we need.
+
+````js
+    <div class="tabbed-pane
+                tabbed-pane_theme_blue
+                tabbed-pane_direction_bottom">
+        ...
+    </div>
+
+    <input class="button
+                  button_theme_black
+                  button_size_l" ... />
+````
+
+You can use different modifiers to change different properties. For example, the
+`theme` modifier can change block's background color and the `size` modifier
+fixes all the dimensions of the block.
+
+**block-name_mod-name_mod-val**
+
+A modifier is a key-value combination, it consists of modifier name, modifier
+value and is prefixed with block name.
+
+````js
+    tabbed-pane_theme_blue
+    tabbed-pane_theme_white
+
+    tabbed-pane_size_s
+    tabbed-pane_size_l
+
+    button_size_s
+    button_size_l
+````
+
+Indeed, modifiers are optional. You almost never will need to link to a page all
+the block modifiers since blocks are rarely used in all their modifications
+within one page.<br/>
+So, similar to optional elements, you can detach their CSS code into their own
+files.
+
+````js
+    blocks/
+        tabbed-pane.css
+        tabbed-pane__tab.css
+        tabbed-pane__pane.css
+        tabbed-pane_theme_blue.css
+        tabbed-pane_theme_black.css
+        tabbed-pane_direction_bottom.css
+````
+
+When building a page CSS file of blocks, you can take only those modifiers which
+it needs.
+
+### Modifying elements
+Elements can be modified in the same way.
+
+<img src="http://img-fotki.yandex.ru/get/4120/14441195.27/0_71214_cff3fb1_M.jpg"
+width="300" height="259" title="" alt="" border="0"/>
+
+The famous examples of modified elements are active tabs and menu items. They
+look a bit different from their friends.
+
+To deliver design changes to an active tab, you need to add a modifier to an
+element. Similar to what we was doing for blocks.
+
+````js
+    <div class="tabbed-pane">
+        <span class="
+            tabbed-pane__tab
+            tabbed-pane__tab_state_current">...</span>
+    </div>
+````
+
+### Block Modifier DOES Affect Element
+Now I'm going to show you where cascade is posible.
+
+<img
+src="http://img-fotki.yandex.ru/get/5627/14441195.27/0_71207_4cfc639a_M.jpg"
+width="300" height="259" title="" alt="" border="0"/>
+
+You can see a modified block here. It has a blue theme. Of course, when having a
+blue theme the block should guarantee that its elements will work correctly. In
+this situation you allow the block affect its elements.
+
+````js
+    .tabbed-pane_theme_blue
+    .tabbed-pane__tab
+    {
+       background-color: #9CF;
+    }
+````
+
+Here cascade is possible because the tabs' appearance DOES depend on block's
+modifier.
+
+*************
+And just to wrap up, to make your blocks independent, be sure that
+
+ * a block has its "name"
+   - no "id" but "classname" selectors
+ * avoid cascade
+ * no "tag" selectors
+
+##Block File Structure
+All the previously shown examples used flat variant when CSS files for blocks,
+elements and modifiers are placed into one folder `blocks`.
+
+````js
+    blocks/
+
+        tabbed-pane.css
+        tabbed-pane__tab.css
+        tabbed-pane__pane.css
+        tabbed-pane_theme_blue.css
+        tabbed-pane_theme_black.css
+        tabbed-pane_size_l.css
+        tabbed-pane_size_s.css
+
+        menu.css
+        menu__item.css
+        menu_size_l.css
+        menu_size_s.css
+
+        logo.css
+
+        search.css
+        search__checkbox.css
+        search__autocomplete.css
+````
+
+That works for not very large projects and not very complicated blocks.
+
+If you expect many blocks with elements and modifiers, it's good to contain all
+the files related to a block in a block folder.
+
+````js
+    blocks/
+
+        tabbed-pane/
+            tabbed-pane.css
+            tabbed-pane__tab.css
+            tabbed-pane__pane.css
+            tabbed-pane_theme_blue.css
+            tabbed-pane_theme_black.css
+            tabbed-pane_size_l.css
+            tabbed-pane_size_s.css
+
+        logo/
+            logo.css
+
+        menu/
+            menu.css
+            menu__item.css
+            menu_size_l.css
+            menu_size_s.css
+
+        search/
+            search.css
+            search__checkbox.css
+            search__autocomplete.css
+````
+
+Less mess, and also it's much easier to copy block files from project to project.
+
+We, at Yandex, use the most detailed structure with internal folders for
+elements and modifiers.
+
+````js
+    blocks/
+
+        tabbed-pane/
+            __tab/
+                _state/
+                    tabbed-pane__tab_state_current.css
+                tabbed-pane__tab.css
+            __pane/
+                tabbed-pane__pane.css
+            _theme/
+                tabbed-pane_theme_blue.css
+                tabbed-pane_theme_black.css
+            tabbed-pane.css
+````
+
+It is not obligatory, but just works for our case.
+
+Now, before proceeding to the next section, let us sum up.
+
+ * First, any interface is a set of blocks, which can be combined in different
+ways, can be placed one into another, can change their parent block. And nothing
+bad should happen since the blocks are independent.
+ * Also, all the nested tags in a block are elements.
+ * And finally, both blocks and elements can be modified.
+
+## BEM
+
+<img src="http://img-fotki.yandex.ru/get/9558/221798411.0/0_b9ee0_87aa2593_M.png"/>
+
+Now, that the three terms are introduced, I am happy to present you BEM methodology.
+You've just learnt its parts related to independent CSS blocks.
+
+Furthermore, BEM brings some other interesting solutions.
+
+ * First, BEM is a methodology. It's a way of thinking when developing. It provides
+us with data domain applicable for all the technologies.
+ * Besides, BEM is a toolkit automating your work.
+ * Finally, BEM is a range of reusable code libraries, making you to develop
+ * faster and better.
+
+Now let's have a look at all these opportunities in a little more detail.
+
+### CSS for IE
+First, I'd like to show how we deal with our bosom friend, the IE browser.
+
+It is possible to link an additional CSS file to a page, especially for IE.
+Using conditional comments you make other browsers ignore this file. So that,
+there we can write fixes for IE only.
+
+````js
+    <html>
+        <head>
+            <!--[if gt IE 7]><!-->
+                <link rel="stylesheet" href="index.css">
+            <!--<![endif]-->
+            <!--[if lt IE 8]>
+                <link rel=stylesheet href="index.ie.css">
+            <![endif]-->
+        </head>
+        ...
+````
+
+Inside the `ie.css` file you import the general CSS file for the page.
+
