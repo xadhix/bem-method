@@ -181,7 +181,7 @@ and CSS.
 
 <img
 src="http://img-fotki.yandex.ru/get/6439/14441195.26/0_711dc_2f5ffa46_M.jpg"
-width="300" style="float: left" height="259" title="" alt="" border="0"/>
+width="300" height="259" title="" alt="" border="0"/>
 
 ````js
     <div class="tabbed-pane">
@@ -193,8 +193,6 @@ width="300" style="float: left" height="259" title="" alt="" border="0"/>
         </div>
      </div>
 ````
-
-<div style="clear:both"></div>
 
 ## Independent CSS blocks
 But in order to build pages with blocks, we developers should be sure that these
