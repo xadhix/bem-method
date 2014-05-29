@@ -72,7 +72,34 @@ A block is an independent interface piece that preserves a design point and some
 functionality. Anything that can be taken as a solid piece and can be put into a
 page is an interface block.
 
-
+<table>
+  <tr>
+      <td>
+          <img
+          src="http://img-fotki.yandex.ru/get/5645/14441195.26/0_711d9_9d9c6157_XL.jpg"
+          width="800" height="52" title="" alt="" />
+      </td>
+  </tr>
+  <tr>
+      <td>
+          <img
+          src="http://img-fotki.yandex.ru/get/6439/14441195.26/0_711dc_2f5ffa46_M.jpg"
+          width="300" height="259" title="" alt="" />
+      </td>
+      <td>
+          <img
+          src="http://img-fotki.yandex.ru/get/4122/14441195.26/0_711da_e8f6dee7_M.jpg"
+          width="300" height="271" title="" alt="" />
+      </td>
+  </tr>
+  <tr>
+      <td>
+          <img
+          src="http://img-fotki.yandex.ru/get/5634/14441195.26/0_711db_81f5c441_L.jpg"
+          width="500" height="47" title="" alt="" />
+      </td>
+  </tr>
+</table>
 
 To operate the blocks, it's good to name them. Here there are a `Menu`, a
 `Calendar` control, a `Footer`, a `Tabbed pane`, a `Dropdown` and a `Search`
@@ -81,7 +108,41 @@ blocks.
 Futhermore, some blocks are large. They usually preserve other blocks. But they
 still are solid independent pieces.
 
-
+<table >
+    <tr>
+        <td colspan="2">
+            <img
+            src="http://img-fotki.yandex.ru/get/4120/14441195.26/0_711dd_3d4b199_XL.jpg"
+            width="800" height="77" title="" alt="" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/5647/14441195.26/0_711de_ac603720_M.jpg"
+            width="300" height="81" title="" alt="" />
+        </td>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/6440/14441195.26/0_711df_12538ac_M.jpg"
+            width="300" height="72" title="" alt="" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img
+            src="http://img-fotki.yandex.ru/get/5634/14441195.26/0_711db_81f5c441_L.jpg"
+            width="500" height="47" title="" alt="" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img
+            src="http://img-fotki.yandex.ru/get/4128/14441195.26/0_711e0_8beaa73d_M.jpg"
+            width="300" height="33" title="" alt="" />
+        </td>
+    </tr>
+</table>
 
 Here you can see the `Header` block that contains some others.
 
@@ -220,7 +281,7 @@ use classes.
 
 The next that can happen with a block is its movement within a page.
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/suLQEIcc68g" allowfullscreen></iframe>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/suLQEIcc68g" ></iframe>
 
 As you can see in the video, the `Tabbed Pane` block was moved to he right side
 of the page and immediately got broken since it has new ancestors, new parent
@@ -535,7 +596,25 @@ write the import instruction linking it to your page.
 ##Modifier
 Now to the last notion, a `modifier`.
 
-
+<table >
+    <tr>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/6439/14441195.26/0_711dc_2f5ffa46_M.jpg"
+            width="300" height="259" title="" alt="" />
+        </td>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/5627/14441195.27/0_71207_4cfc639a_M.jpg"
+            width="300" height="259" title="" alt="" />
+        </td>
+        <td>
+            <img
+            src="http://img-fotki.yandex.ru/get/5632/14441195.27/0_71206_5fb7bc50_M.jpg"
+            width="300" height="259" title="" alt="" />
+        </td>
+    </tr>
+</table>
 
 Again, the same block sometimes can look slightly different. Here it is not
 because of optional elements but because of its own design distinctions.
