@@ -90,6 +90,7 @@ CSS-классы используются для хранения информа
 
 ```html
 <span class="input input_type_password input_disabled"></span>
+```
 
 ## Соглашения по именованию
 
