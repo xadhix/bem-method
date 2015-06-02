@@ -18,12 +18,14 @@
 
 Блоки могут быть простыми (например, `logo`) и составными (например, `head`), содержащими другие блоки и [элементы](#elem).
 
-<img src="https://img-fotki.yandex.ru/get/15534/158800653.0/0_111fb2_7710ab3d_orig" width="420" height="300" alt="Составляющие блока Шапка">
+<img src="https://img-fotki.yandex.ru/get/15534/158800653.0/0_111fb2_7710ab3d_orig" align="center" width="500" height="300" alt="Составляющие блока Шапка">
 
 
 ![Составляющие блока Шапка](https://img-fotki.yandex.ru/get/15534/158800653.0/0_111fb2_7710ab3d_orig)
 
 Блоки можно перемещать и повторно использовать в пределах одной страницы, разных страниц или проектов.
+
+<img src="https://img-fotki.yandex.ru/get/16156/158800653.0/0_111fb3_2fec3fed_orig" align="center" width="500" height="200" alt="Смена положения блоков">
 
 ![Смена положения блоков](https://img-fotki.yandex.ru/get/16156/158800653.0/0_111fb3_2fec3fed_orig)
 
